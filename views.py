@@ -2,10 +2,10 @@ from flask import Flask,render_template,request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] =  'mysql://root:@localhost/client_details'
+app.config['SQLALCHEMY_DATABASE_URI'] =  'mysql://root:@localhost/contact_detail'
 
 db =SQLAlchemy(app)
-class Contacts(db.Model):
+class client_detail(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     subject = db.Column(db.String(12), nullable=False)
@@ -20,7 +20,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route("/",methods=['GET','POST'])
+@app.route("/contact",methods=['GET','POST'])
 def Contact():
     if ( request.method == 'POST'):
 
@@ -30,11 +30,10 @@ def Contact():
         subject = request.form.get('subject')
 
 
-        entry = Contacts(name = name ,subject =subject,message=msg,email=email)
+        entry = client_detail(name = name ,subject =subject,message=msg,email=email)
         db.session.add(entry)
         db.session.commit()
-    else:
-        return render_template('index.html')
+    return render_template('index.html')
 
 app.run(debug=True)
 

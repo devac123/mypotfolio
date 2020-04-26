@@ -70,8 +70,9 @@
           <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-           <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
           <li><a href="#services"><i class="bx bx-envelope"></i> Services</a></li>
+           <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+          
 
 
 
@@ -589,36 +590,34 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="/contact" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit" value="submit">Send Message</button></div>
-            </form>
+<!--            <form action="/contact" method="post"  class="php-email-form">-->
+            <form action="/contact" method="post">
+        <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name">
+        </div>
+        <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control"   name="email">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="Password" class="form-control"   name="password">
+      </div>
+      <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" class="form-control"   name="mobile">
+      </div>
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" class="form-control"   name="subject">
+      </div>
+       <div class="form-group">
+        <label>Message</label>
+        <input type="text" class="form-control"   name="message">
+      </div>
+      <button type="submit" class="btn btn-primary">Primary</button>
+      </form>
           </div>
 
         </div>
