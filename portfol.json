@@ -1,0 +1,11 @@
+{
+   "params":
+   {
+
+     "local_server": "mysql://root:@localhost/contact_detail",
+     "templates": "index.html",
+     "email": "https://accounts.google.com/ServiceLogin/identifier?flowName=GlifWebSignIn&flowEntry=AddSession&cid=1&navigationDirection=forward"
+   }
+
+
+}
