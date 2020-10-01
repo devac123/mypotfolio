@@ -41,5 +41,5 @@ def Contact():
         db.session.commit()
     return render_template('index.html')
 
-app.run(debug=True)
+app.run(debug=false)
 
